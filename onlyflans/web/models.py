@@ -13,8 +13,8 @@ class Flan(models.Model):
 
 class ContactForm(models.Model):
     contact_form_uuid = models.UUIDField(primary_key = True, default=uuid.uuid4, editable=False )
-    customer_email = models.EmailField(unique=True)
-    customer_name = models.CharField(max_length=64)
+    customer_email = models.EmailField(unique = True)
+    customer_name = models.CharField(max_length = 64)
     message = models.TextField(default='Deje un mensaje')
 
     def get_absolute_url(self):
