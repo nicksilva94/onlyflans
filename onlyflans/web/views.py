@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Flan, ContactForm
 from .forms import ContactFormModelForm
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 
 flanes = Flan.objects.all()
 flanes_privados = Flan.objects.filter(is_private=True)
@@ -39,3 +40,5 @@ def contacto(request):
 
 def exito(request):
     return render(request, 'success.html', {})
+
+
