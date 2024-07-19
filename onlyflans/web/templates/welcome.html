@@ -6,9 +6,16 @@
 
     {%block 'content' %}
     <div class="container">
-        Bienvenido Cliente
+
     </div>
-    <div class="container">
+    <div class="container" style="padding-top: 50px;">
+        <main class="container">
+            <div class="p-5 rounded" style="color: black; background-color: rgba(142, 147, 216, 0.5);">
+              <h1>Bienvenido {{user.get_username}}</h1>
+              <p class="lead">Tenemos una lista de productos exclusivos para ti ¿Quieres conocer mas?.</p>
+              <a class="btn btn-outline-dark" href="/contacto" role="button">Contactanos!</a>
+            </div>
+        </main>
     </div>
     <div class="container mt-5">
         <h1>Nuestros Flanes</h1>
@@ -16,7 +23,7 @@
             {% for flan in flanes_privados %}
             <div class="col-md-3 mb-3">
                 <div class="card">
-                    <img src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}">
+                    <img src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}" style="width: 305px; height: 170px;">
                     <div class="card-body">
                         <h5 class="card-title">{{ flan.name }}</h5>
                         <p class="card-text">{{ flan.description }}</p>
