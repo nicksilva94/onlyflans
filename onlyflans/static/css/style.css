@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 100px;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin: 0;
+  height: 1080px;
+  background-color: rgb(184, 184, 184);
+}
+
+body div.container {
+  max-width: 35rem;
+}
+
+body div.container div{
+  padding-bottom: 20px;
+}
+
+body div.container div form{
+  padding-bottom: 20px;
+}
+
+body div.container a{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
